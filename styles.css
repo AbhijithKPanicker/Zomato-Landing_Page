@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;    
+}
+
+.heroSection{
+    background: url(./images/heroSectionBackground.png);
+    /* background: url(A:\Code\Devtown\Full_Stack_Development\Projects\Zomato-Landing-Page\images\heroSectionBackground.png); */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 60vh;
+}
+
+.navbar{
+    display:flex ;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    height: 65px;
+    padding: 16px 48px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar__menu_container{
+    display: flex;
+    gap: 20px;
+    /* padding-right: 20px; */
+    /* both padding and gap can be used to add spaces in between but padding can applied on 360 degree whereas gap is space between two elements. */
+}
+
+.navbar__menu_container .user_icon{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: solid 1px white;
+    display: none;
+    /* display: none; is used to hide the user icon and will only displayed when it is in mobile screen size */
+}
+
+/* When the screen size is between 0-600px i.e small/mobile screen size, the below styles will trigered. */
+@media only screen and (max-width: 600px){
+    .navbar__menu_container .user_icon{
+        display: flex;   /* This will display the user icon when reduce the screen size*/
+    }   
+    .link{
+        display: none;    /*This will hide the anchor tag of class link when the screen size will be reduced. */
+    }
+    .heroSection{
+        min-height: 80vh;
+    }
+}
