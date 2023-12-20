@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heroSection{
+    background: url(/images/heroSectionBackground.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    padding: 16px 48px;
+}
+
+.navbar a{
+    color: white;
+    /* height: 20px;  */
+    
+    text-decoration:none ;
+    /* The above line is used for removing for adding underline */
+}
+
+.navbaar__menu_container{
+    display: flex;
+    gap: 20px;
+    /* padding-right: 20px;
+    padding right and gap works in same way */
+}
+
+.navbaar__menu_container .user_icon{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100% ;
+    /* height and width are used for making sqaure and border-radius is used for making circle */
+    border: solid 1px white;
+    display: none;
+    /* display: none; is used for hiding the user icon as it would not be useful for the people who are using the desktop
+     and will keep it for mobile screen size only. */
+}
+
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: calc( 60vh - 65px );
+    /* height: 320px; */
+
+}
+
+/*  ME */
+/* .hero__section_container h1{
+    color: white;
+} */
+
+.hero__section_logo{
+    width: 250px;
+    height: auto;
+    /* height: 40px; */
+}
+
+.hero__section_title{
+    color: white;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 350;
+}
+
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.input_container_location, 
+.input_container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.input_container_location{
+    width: 35%;
+    border-right: 2px solid  #e0e0e0  ;
+}
+
+.input_container_search{
+    width: 65%;
+}
+
+
+
+
+/* Screen size is from 0-600  i.e, smaller/mobile screen size. */
+@media only screen and (max-width: 600px){
+    .navbaar__menu_container .user_icon{
+        display: flex;
+    }
+    .link{
+        display: none;
+    }
+    .heroSection{
+        min-height: 80vh;
+    }
+}
